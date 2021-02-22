@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { HeroeComponent } from './heroes/heroe/heroe.component';
-import { RecaptchaModule, RecaptchaFormsModule } from 'ng-recaptcha';
+// import { RecaptchaModule, RecaptchaFormsModule } from 'ng-recaptcha';
 
 @NgModule({
   declarations: [
@@ -13,9 +13,7 @@ import { RecaptchaModule, RecaptchaFormsModule } from 'ng-recaptcha';
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    RecaptchaModule,
-    RecaptchaFormsModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

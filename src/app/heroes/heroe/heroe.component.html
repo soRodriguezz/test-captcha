@@ -3,7 +3,7 @@
 </h3>
 <hr />
 
-<form (ngSubmit)="agregar()" method="POST">
+<form (ngSubmit)="agregar()" onsubmit="miFuncion()" method="POST">
   <input
     type="text"
     placeholder="Nombre"
@@ -18,19 +18,13 @@
     name="password"
   />
 
-  <button type="submit">Agregar</button>
-  
+  <!-- <button type="submit">Agregar</button> -->
+
   <h3>AQUI ESTA EL RECAPTCHA</h3>
 
-  <re-captcha (resolved)="resolved($event)" [siteKey]="sitekey"></re-captcha> 
-  
-  <!-- 
-    //Envio de  catchap con google 
-    <div
-    class="g-recaptcha"
-    data-sitekey="6LdMN2IaAAAAAA_6DcIa_Z2st56Yjrq7K1nILZab"
-  ></div>
-  <input type="submit" name="enviar" id='enviar' placeholder="ENVIAR" />
--->
+  <!-- <re-captcha (resolved)="resolved($event)" [siteKey]="sitekey"></re-captcha>  -->
 
+  <!-- Envio de  catchap con google  -->
+  <div class="g-recaptcha" data-sitekey="6LdMN2IaAAAAAA_6DcIa_Z2st56Yjrq7K1nILZab"></div>
+  <input type="submit" name="enviar" />
 </form>

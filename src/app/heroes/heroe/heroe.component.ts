@@ -1,16 +1,17 @@
 import { Component, Input, OnInit, Renderer2 } from '@angular/core';
 import { Personaje } from 'src/app/interfaces/dbz.interfaces';
 
-
 @Component({
   selector: 'app-heroe',
   templateUrl: 'heroe.component.html',
 })
-export class HeroeComponent implements OnInit {
-  sitekey: string;
+
+// 
+export class HeroeComponent implements OnInit{
+  //sitekey: string;
 
   constructor(private _renderer: Renderer2) {
-    this.sitekey = '6LdMN2IaAAAAAA_6DcIa_Z2st56Yjrq7K1nILZab';
+    //this.sitekey = '6LdMN2IaAAAAAA_6DcIa_Z2st56Yjrq7K1nILZab';
   }
 
   ngOnInit(): void {
@@ -22,10 +23,10 @@ export class HeroeComponent implements OnInit {
     this._renderer.appendChild(document.body, script);
   }
 
-  resolved(token) {
+   resolved(token) {
     // enviar token
     console.log(token);
-  }
+   }
 
   @Input() nuevo: Personaje = {
     nombre: '',
