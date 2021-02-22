@@ -1,26 +1,36 @@
 <h3>
-    Agregar <small>{{ nuevo.nombre }}</small>
-  </h3>
-  <hr />
+  Agregar <small>{{ nuevo.nombre }}</small>
+</h3>
+<hr />
+
+<form (ngSubmit)="agregar()" method="POST">
+  <input
+    type="text"
+    placeholder="Nombre"
+    [(ngModel)]="nuevo.nombre"
+    name="nombre"
+  />
+
+  <input
+    type="password"
+    placeholder="Password"
+    [(ngModel)]="nuevo.password"
+    name="password"
+  />
+
+  <button type="submit">Agregar</button>
   
-  <form (ngSubmit)="agregar()">
+  <h3>AQUI ESTA EL RECAPTCHA</h3>
 
-    <input
-      type="text"
-      placeholder="Nombre"
-      [(ngModel)]="nuevo.nombre"
-      name="nombre"
-    />
-
-    <input
-      type="password"
-      placeholder="Password"
-      [(ngModel)]="nuevo.password"
-      name="password"
-    />
+  <re-captcha (resolved)="resolved($event)" [siteKey]="sitekey"></re-captcha> 
   
-    <button type="submit">Agregar</button>
+  <!-- 
+    //Envio de  catchap con google 
+    <div
+    class="g-recaptcha"
+    data-sitekey="6LdMN2IaAAAAAA_6DcIa_Z2st56Yjrq7K1nILZab"
+  ></div>
+  <input type="submit" name="enviar" id='enviar' placeholder="ENVIAR" />
+-->
 
-
-  </form>
-  
+</form>
